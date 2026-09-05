@@ -11,7 +11,6 @@ Spring Bootを使ってREST APIを実装する方法を学習するためのデ�
 ## 起動方法
 
 ```bash
-cd demo
 ./mvnw spring-boot:run
 ```
 
