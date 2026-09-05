@@ -97,3 +97,6 @@ DELETE http://localhost:8080/tasks/{id}
 - `service`: メモリ上のタスクの取得・追加を担当する層
 - `model`: APIで扱う `Task` データモデル
 - `resources/application.properties`: アプリケーション設定
+
+## 参考
+・[Spring Bootを使ったREST APIの基本構築から動作確認まで①](https://qiita.com/pomecode/items/dcd2353d1f3b49dc23ff)
