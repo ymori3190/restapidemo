@@ -12,12 +12,24 @@ import com.example.demo.model.Task;
 public class TaskService {
 
     private List<Task> allTasks = new ArrayList<> (Arrays.asList(
-        new Task(1L, "Task 1", "Description for Task 1"),
-        new Task(2L, "Task 2", "Description for Task 2"),
-        new Task(3L, "Task 3", "Description for Task 3")
+        new Task(1L, "勉強", "WebAPIの勉強をする"),
+        new Task(2L, "開発", "実際にWebAPIを作ってみる"),
+        new Task(3L, "ドキュメンテーション", "作ったWebAPIのドキュメントを作成する")
     ));
     
     public List<Task> getAllTasks() {
         return allTasks;
     }
+
+    public Task getTaskById(Long id) {
+        return allTasks.stream()
+                .filter(task -> task.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public  void addTask(Task task) {
+        allTasks.add(task);
+    }
+
 }
