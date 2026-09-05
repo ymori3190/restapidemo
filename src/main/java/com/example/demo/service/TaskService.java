@@ -20,4 +20,16 @@ public class TaskService {
     public List<Task> getAllTasks() {
         return allTasks;
     }
+
+    public Task getTaskById(Long id) {
+        return allTasks.stream()
+                .filter(task -> task.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public  void addTask(Task task) {
+        allTasks.add(task);
+    }
+
 }
